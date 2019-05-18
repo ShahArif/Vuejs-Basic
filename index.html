@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://unpkg.com/vue@2.6.10/dist/vue.js"></script>
+	<title>First Lesson</title>
+</head>
+<body>
+	<div id="myApp">
+        <h1>Hello World! I am {{firstName }} {{lastName}}</h1>
+        <h2>{{message}}</h2>
+	</div>
+</body>
+<script>
+    new Vue({
+        el:"#myApp",
+        data:{
+            message:"Hi This messages come from here",
+            firstName:"Arif",
+            lastName:"Shah"
+        }
+    });
+</script>
+</html>
