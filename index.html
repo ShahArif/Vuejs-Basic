@@ -2,15 +2,24 @@
 <html>
 <head>
     <script src="https://unpkg.com/vue@2.6.10/dist/vue.js"></script>
-   
-	<title>First Lesson</title>
+    <title>First Lesson</title>
+    <style>
+        .imageSize{
+            height: 500px;
+            width: 600px;
+        }
+    </style>
 </head>
 <body>
 	<div id="myApp">
-        <h1>Hello World! I am {{firstName }} {{lastName}}</h1>
-        <h2>{{message}}</h2>
-        <p>{{display('Arif')}}</p>
-        <h4>{{welcome('Shah sahab')}}</h4>
+       <a v-bind:href="url"v-bind:title="title"> <h1>{{ name }}</h1></a>
+       <!-- You can remove the v-bind and just use colon symbol , it will still work -->
+       <img :src ="imageUrl" v-bind:class="{imageSize:isActive}">
+       <input  type="text" placeholder="Name" v-bind:value="name">
+       <input  type="text" placeholder="Email" v-bind:value="email">
+       <div v-html="htmlContent">
+           
+       </div>
 	</div>
 </body>
 <script src="./app.js"></script>

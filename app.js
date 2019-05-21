@@ -1,17 +1,15 @@
 var myView =  new Vue({
         el:"#myApp",
         data:{
-            message:"Hi This messages come from here",
-            firstName:"Arif",
-            lastName:"Shah",
-            lessonNo :"Second"
+            name:"Facebook Link",
+            url:"https://www.facebook.com",
+            title:"This is facebook link",
+            imageUrl:'./images/image1.png',
+            isActive:true,
+            name:'Arif',
+            email:'arif@shah.com',
+            htmlContent:"<p><b>This content is comming from Backend<b></p>"
         },
         methods:{
-            display : function(param){
-                return 'This message is comming from Display method called by'+ param
-            },
-            welcome:function(name){
-                return 'Welcome to Vuejs Basics '+this.lessonNo + ' By '+ name
-            }
         }
     });
