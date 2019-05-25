@@ -1,15 +1,20 @@
 var myView =  new Vue({
         el:"#myApp",
         data:{
-            counter: 0
+            message:'Default message'
         },
         methods:{
-            increment: function(){
-               
-                this.counter ++;
+            keypressEvent: function(){
+
+               console.log('key Press Events called ' + event.key);
             },
-            decrement: function(num){
-                 this.counter -= num;
-            }
+             keyUpEvent: function(){
+               console.log('key Up Events called ' + event.key);
+            },
+            keyDownEvent: function(){
+               console.log('key Down Events called ' + event.key);
+            },
         }
     });
+
+

@@ -12,10 +12,12 @@
 </head>
 <body>
 	<div id="myApp">
-        <h1>{{counter}}</h1>
-        <button  type="button" v-on:click="increment">Increment +</button>
-        <!-- Passing arguments to the events , Decrement by 5 -->
-        <button  type="button" v-on:click="decrement(5)">Decrement -</button>
+        <h1>{{message}}</h1>
+        <input type="tex" name="message" @keypress="keypressEvent">
+        <br>
+         <input type="tex" name="message" @keyUp="keyUpEvent">
+        <br>
+        <input type="tex" name="message" @keyDown="keyDownEvent">
 	</div>
 </body>
 <script src="./app.js"></script>
