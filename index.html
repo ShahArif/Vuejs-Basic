@@ -12,14 +12,10 @@
 </head>
 <body>
 	<div id="myApp">
-       <a v-bind:href="url"v-bind:title="title"> <h1>{{ name }}</h1></a>
-       <!-- You can remove the v-bind and just use colon symbol , it will still work -->
-       <img :src ="imageUrl" v-bind:class="{imageSize:isActive}">
-       <input  type="text" placeholder="Name" v-bind:value="name">
-       <input  type="text" placeholder="Email" v-bind:value="email">
-       <div v-html="htmlContent">
-           
-       </div>
+        <h1>{{counter}}</h1>
+        <button  type="button" v-on:click="increment">Increment +</button>
+        <!-- Passing arguments to the events , Decrement by 5 -->
+        <button  type="button" v-on:click="decrement(5)">Decrement -</button>
 	</div>
 </body>
 <script src="./app.js"></script>
