@@ -1,67 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <script src="https://unpkg.com/vue@2.6.10/dist/vue.js"></script>
+    <script src="./vue.js"></script>
     <title>First Lesson</title>
-    <style>
-        .imageSize{
-            height: 500px;
-            width: 600px;
-        }
-    </style>
+   
 </head>
 <body>
 	<div id="myApp">
-        <h1>{{counter}}</h1>
-
-        <!-- Click.once prevents multiple clicks -->
-       <button v-on:click.once="increment">CLick For Increment</button>
-        <br>
-        <br>
-        <br>
-         <!-- .prevent  prevents the the whole click functionality-->
-         <a href="https:www.google.com" @click.prevent>Google Website</a>
-        <br>
-        <br>
-        <br>
-        <form action="" method="post" @submit.prevent>
-          <input type="submit" name="" value="Submit Form">
-        </form>
-        <br>
-        <br>
-        <br>
-        <h4>Firing parent event while child event is fired</h4>
-        <!-- Right now If we are clicking BtnChild it will fire parentClickEvent as well-->
-        <div class="parent" @click="parentClickEvent">
-            <button type="button" @click="btnChildClick">Click me</button>
-        </div>
-        <h4>Using .stop modifier to prevent parent event fire</h4>
+        <!-- <h1>{{chrecterfirst}}</h1> -->
+        <!-- Printing with the help of keypress event -->
+        <!-- <input type="text" name="" @keypress="keypressfunction"> -->
          <br>
-        <br>
-        <br>
-        <!-- We can use .stop to prevent parent click-->
-        <div class="parent" @click="parentClickEvent">
-            <button type="button" @click.stop="btnChildClick">Click me</button>
-        </div>
          <br>
-        <br>
-        <br>
-        <!-- Right now If we are clicking BtnChild it will fire parentClickEvent as well and child event will be fired first-->
-        <div class="parent" @click="parentClickEvent">
-            <button type="button" @click="btnChildClick">Click me</button>
-        </div>
-        <h4>Using .stop modifier to prevent parent event fire</h4>
          <br>
-        <br>
-        <br>
-        <!-- We can use .capture to fire parent event first and the child event-->
-        <div class="parent" @click.capture="parentClickEvent">
-            <button type="button" @click="btnChildClick">Click me</button>
-        </div>
-
-
-
+        <input type="text" name="name" v-model="name"> {{name}}
+        <br><br>
+        <input type="text" name="email" v-model="email"> {{email}}
+         <h1></h1>
 	</div>
 </body>
 <script src="./app.js"></script>
 </html>
+
+
+ 

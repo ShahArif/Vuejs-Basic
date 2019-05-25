@@ -1,19 +1,14 @@
 var myView =  new Vue({
         el:"#myApp",
         data:{
-            counter : 0,
-            message:'Default message'
+            chrecterfirst : '',
+            name : 'Enter name please',
+            email:'Enter Email Id'
         },
         methods:{
-            increment: function(){
-                this.counter++;
-            },
-             parentClickEvent: function(){
-               console.log('Parent Click Event');
-            },
-            btnChildClick: function(){
-               console.log('Button Child Click');
-            },
+            keypressfunction: function(event){
+               this.chrecterfirst = event.key;
+            }
         }
     });
 
