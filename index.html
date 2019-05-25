@@ -12,12 +12,55 @@
 </head>
 <body>
 	<div id="myApp">
-        <h1>{{message}}</h1>
-        <input type="tex" name="message" @keypress="keypressEvent">
+        <h1>{{counter}}</h1>
+
+        <!-- Click.once prevents multiple clicks -->
+       <button v-on:click.once="increment">CLick For Increment</button>
         <br>
-         <input type="tex" name="message" @keyUp="keyUpEvent">
         <br>
-        <input type="tex" name="message" @keyDown="keyDownEvent">
+        <br>
+         <!-- .prevent  prevents the the whole click functionality-->
+         <a href="https:www.google.com" @click.prevent>Google Website</a>
+        <br>
+        <br>
+        <br>
+        <form action="" method="post" @submit.prevent>
+          <input type="submit" name="" value="Submit Form">
+        </form>
+        <br>
+        <br>
+        <br>
+        <h4>Firing parent event while child event is fired</h4>
+        <!-- Right now If we are clicking BtnChild it will fire parentClickEvent as well-->
+        <div class="parent" @click="parentClickEvent">
+            <button type="button" @click="btnChildClick">Click me</button>
+        </div>
+        <h4>Using .stop modifier to prevent parent event fire</h4>
+         <br>
+        <br>
+        <br>
+        <!-- We can use .stop to prevent parent click-->
+        <div class="parent" @click="parentClickEvent">
+            <button type="button" @click.stop="btnChildClick">Click me</button>
+        </div>
+         <br>
+        <br>
+        <br>
+        <!-- Right now If we are clicking BtnChild it will fire parentClickEvent as well and child event will be fired first-->
+        <div class="parent" @click="parentClickEvent">
+            <button type="button" @click="btnChildClick">Click me</button>
+        </div>
+        <h4>Using .stop modifier to prevent parent event fire</h4>
+         <br>
+        <br>
+        <br>
+        <!-- We can use .capture to fire parent event first and the child event-->
+        <div class="parent" @click.capture="parentClickEvent">
+            <button type="button" @click="btnChildClick">Click me</button>
+        </div>
+
+
+
 	</div>
 </body>
 <script src="./app.js"></script>

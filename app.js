@@ -1,18 +1,18 @@
 var myView =  new Vue({
         el:"#myApp",
         data:{
+            counter : 0,
             message:'Default message'
         },
         methods:{
-            keypressEvent: function(){
-
-               console.log('key Press Events called ' + event.key);
+            increment: function(){
+                this.counter++;
             },
-             keyUpEvent: function(){
-               console.log('key Up Events called ' + event.key);
+             parentClickEvent: function(){
+               console.log('Parent Click Event');
             },
-            keyDownEvent: function(){
-               console.log('key Down Events called ' + event.key);
+            btnChildClick: function(){
+               console.log('Button Child Click');
             },
         }
     });
