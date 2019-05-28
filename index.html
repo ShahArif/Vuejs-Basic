@@ -3,20 +3,32 @@
 <head>
     <script src="./vue.js"></script>
     <title>First Lesson</title>
-   
+   <style type="text/css">
+    .first{
+      height: 500px;
+      width:100%;
+    
+    }
+     .bgGreen{
+        background-color: green;
+     }
+     .bgBlue{
+       background-color: blue;
+     }
+   </style>
 </head>
 <body>
 	<div id="myApp">
-        <!-- <h1>{{chrecterfirst}}</h1> -->
-        <!-- Printing with the help of keypress event -->
-        <!-- <input type="text" name="" @keypress="keypressfunction"> -->
-         <br>
-         <br>
-         <br>
-        <input type="text" name="name" v-model="name"> {{name}}
-        <br><br>
-        <input type="text" name="email" v-model="email"> {{email}}
-         <h1></h1>
+     <div class="first" v-bind:class="{ bgGreen: isActive}">
+         <button @click="chnageColorToGreen">Change Color to Green</button>
+         <button @click="chnageColorToBlue">Change Color to Blue</button>
+     </div>
+      <div class="second" v-bind:class="{bgGreen: isbgGreen, bgBlue:isbgBlue}">
+         <button @click="chnageColorToGreen">Toggle Color</button>
+         <button @click="toggleColor">Toggle Color</button>
+         <button @click="{isActive = !isActive}">Toggle Color With Inline IsActive </button>
+        
+     </div>
 	</div>
 </body>
 <script src="./app.js"></script>
