@@ -3,31 +3,30 @@
 <head>
     <script src="./vue.js"></script>
     <title>First Lesson</title>
-   <style type="text/css">
-    .first{
-      height: 500px;
-      width:100%;
-    
-    }
-     .bgGreen{
-        background-color: green;
-     }
-     .bgBlue{
-       background-color: blue;
+   <style>
+     .login{
+        height: 300px;
+        width: 500px;
+        margin: auto;
+        background-color: aqua;
+        border-radius: 5px;
+        margin-top: 10%;
+        text-align:center;
      }
    </style>
 </head>
 <body>
 	<div id="myApp">
-     <div class="first" v-bind:class="{ bgGreen: isActive}">
-         <button @click="chnageColorToGreen">Change Color to Green</button>
-         <button @click="chnageColorToBlue">Change Color to Blue</button>
+     <div class="login">
+         <input type="text" class="input-controle" name="username" placeholder="Enter Username">
+         <br>
+         <button>Login</button>
      </div>
-      <div class="second" v-bind:class="{bgGreen: isbgGreen, bgBlue:isbgBlue}">
-         <button @click="chnageColorToGreen">Toggle Color</button>
-         <button @click="toggleColor">Toggle Color</button>
-         <button @click="{isActive = !isActive}">Toggle Color With Inline IsActive </button>
-        
+     <div class="dashboard">
+       
+     </div>
+     <div class="profile">
+       
      </div>
 	</div>
 </body>
