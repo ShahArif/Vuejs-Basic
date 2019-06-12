@@ -18,15 +18,15 @@
 <body>
 	<div id="myApp">
      <div class="login">
-         <input type="text" class="input-controle" name="username" placeholder="Enter Username">
-         <br>
-         <button>Login</button>
-     </div>
-     <div class="dashboard">
-       
-     </div>
-     <div class="profile">
-       
+         <button v-on:click="a++">Add To A</button>
+         <button v-on:click="b++">Add To B</button>
+         <p>{{a}}</p><br>
+         <p>{{b}}</p><br>
+         <!-- () barces makes them simples methods but if we want to call computed methods we have to remove () braces -->
+         <!-- <p>Age + A {{addToA()}}</p><br>  
+         <p>Age + B {{addToB()}}</p><br> -->
+         <p>Age + A {{addToA}}</p><br>  
+         <p>Age + B {{addToB}}</p><br>
      </div>
 	</div>
 </body>
